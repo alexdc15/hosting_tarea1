@@ -20,28 +20,17 @@
             <img src="textures/meteor.jpeg" id="meteor">
             <img src="textures/Mt-map.png" id="mtnormal">
             <a-asset-item id="vespa" src="low_poly_vespa_with_a_quirky_twist/scene.gltf"></a-asset-item>
+            <a-asset-item id="stuka" src="low_poly_ju-stuka/scene.gltf"></a-asset-item>
         </a-assets>
-        <a-sphere
-        id="esfera"
-        position="0 0 0" rotation="0 0 0"
-        src="textures/meteor.jpeg"
-        repeat="1 1"
-        normal-map="#mtnormal"
-        normal-scale="1 1"
-        position="0 0 0"
-        >
-            
-        </a-sphere>
-        
+               
         <a-entity>
-            <a-camera wasd-controls="aceleration:10000"><a-entity gltf-model="#vespa"
-                position="0 -6 -2" rotation="0 180 0"
-                ></a-entity>
+            <a-camera wasd-controls="aceleration:10000">
+                <a-entity gltf-model="#vespa" position="0 -6 -2" rotation="0 180 0"></a-entity>
                 <!--ELEMENTO PARA EL TEXTO-->
-            <a-text value="0 METEORITOS FULMINADOS" color="black" position="0 -0.1 -1" width="1" align="center"></a-text>
+            <a-text value="0 STUKAS DERRIBADOS" color="black" position="-1 0.7 -1" width="1" align="center"></a-text>
 
             <!-- ELEMENTO CURSOR PARA CREAR INTERACCIÓN CON METEORITOS (FUSE = CUANDO ESTÉ EN UN ELEMENTO)-->
-            <a-entity cursor="fuse: true; fuseTimeout: 100" position="0 0 -1" raycaster="objects: .meteor"
+            <a-entity cursor="fuse: true; fuseTimeout: 100" position="0 0 -1" raycaster="objects: .plane"
                 geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="shader: flat"></a-entity>
                 <!-- RAYCASTER: MEJORAMOS RENDIMIENTO PARA NO LANZAR CLICK CONTINUAMENTE-->
             </a-camera>
